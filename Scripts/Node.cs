@@ -119,6 +119,7 @@ namespace XNode {
         public static NodeGraph graphHotfix;
 
         protected void OnEnable() {
+            if (ports == null) ports = new NodePortDictionary();
             if (graphHotfix != null) graph = graphHotfix;
             graphHotfix = null;
             UpdatePorts();
